@@ -1,44 +1,59 @@
 import styled from 'styled-components'
 
-export const VagasAnuncio = styled.li`
-  border: 1px solid ${(props) => props.theme.corPrincipal};
-  background-color: ${(props) => props.theme.corSecundaria};
-  color: ${(props) => props.theme.corPrincipal};
+export const VagaLi = styled.li`
+  border: 1px solid var(--cor-principal);
+  background-color: var(--cor-secundaria);
+  color: var(--cor-principal);
   padding: 16px;
   transition: all ease 0.3s;
-  border-radius: 8px;
 
-  :hover {
-    background-color: ${(props) => props.theme.corPrincipal};
-    color: ${(props) => props.theme.corSecundaria};
+  h3 {
+    height: 40px;
+  }
 
-    a {
-      border-color: ${(props) => props.theme.corPrincipal};
-      background-color: ${(props) => props.theme.corSecundaria};
-      color: ${(props) => props.theme.corPrincipal};
+  ul {
+    height: 100px;
+  }
+
+  &:hover {
+    background-color: var(--cor-principal);
+    color: var(--cor-secundaria);
+  }
+
+  &:hover a {
+    border-color: var(--cor-principal);
+    background-color: var(--cor-secundaria);
+    color: var(--cor-principal);
+  }
+
+  @media (max-width: 767px) {
+    ul {
+      height: 130px;
     }
   }
 
-  li {
-    list-style: none;
+  @media (min-width: 768px) and (max-width: 1023px) {
+    ul {
+      height: 130px;
+    }
   }
 `
-export const TitleAnuncioDaVaga = styled.h3`
+
+export const Title = styled.h3`
   font-weight: bold;
   margin-bottom: 16px;
 `
 
-export const LinkAnuncio = styled.a`
-  border-color: ${(props) => props.theme.corSecundaria};
-  background-color: ${(props) => props.theme.corPrincipal};
-  color: ${(props) => props.theme.corSecundaria};
+export const Link = styled.a`
+  border-color: var(--cor-secundaria);
+  background-color: var(--cor-principal);
+  color: var(--cor-secundaria);
   display: inline-block;
   padding: 8px 16px;
   text-decoration: none;
   margin-top: 16px;
   font-weight: bold;
   font-size: 14px;
-  border-radius: 8px;
   text-align: center;
 
   @media (max-width: 768px) {
